@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "desearch-dms"
 version = "0.0.1"
@@ -18,3 +22,7 @@ include = ["apps*", "libs*"]
 
 [tool.uvicorn]
 factory = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
